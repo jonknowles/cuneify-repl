@@ -8,13 +8,13 @@
   <body>
     <section>
       <h1 class="title">Cuneify REPL</h1>
+      <h3 class="">A Read Eval Print Loop for Cuneiform</h1>
       <p>
-        Type <a target="_blank" href="http://oracc.museum.upenn.edu/saao/knpp/cuneiformrevealed/aboutcuneiform/computercuneiform/index.html">ASCII Transliteration Format (ATF) notation</a> in the left editor below and it will be transformed into cuneiform characters.
+        Type <a target="_blank" href="http://oracc.museum.upenn.edu/saao/knpp/cuneiformrevealed/aboutcuneiform/computercuneiform/index.html">ASCII Transliteration Format (ATF) notation</a> in the left editor and it will be transformed into cuneiform characters on the right.
       </p>
-      <p>This page is based on the <a target="_blank" href="http://cuneifyplus.arch.cam.ac.uk/">Cuneify project</a> <a target="_blank" href="https://github.com/tpgillam/cuneifyplus">source code</a> by Steve Tinney and Tom Gillam.</p>
       <p>
         Sample ATF syntax:
-        {f}KURUN.NA szu-a-ti u2-ka-an-nu-szi-ma a-na me#-e i-na#-[ad-du]-u2-szi
+        <pre>{f}KURUN.NA szu-a-ti u2-ka-an-nu-szi-ma a-na me#-e i-na#-[ad-du]-u2-szi</pre>
       </p>
     </section>
     <section class="editor-area">
@@ -26,19 +26,21 @@
         <div>
           <select id="font-select"></select>
         </div>
+        <button id="go-btn" type="button">
+          Transliterate
+        </button>
       </div>
     </section>
-    <section class="controls-area">
-      <!-- <button id="go-btn" type="button">
-        Go
-      </button> -->
+    <section class="share-area">
 
       <p>
-        <span class="label">Shareable permalink:</span>
+        <strong class="label">Shareable permalink:</strong>
         <span id="permalink" class="permalink"></span>
       </p>
 
     </section>
+
+    <p>This page is based on the <a target="_blank" href="http://cuneifyplus.arch.cam.ac.uk/">Cuneify project</a> <a target="_blank" href="https://github.com/tpgillam/cuneifyplus">source code</a> by Steve Tinney and Tom Gillam. It has been ported to client-side JavaScript by <a target="_blank" href="https://github.com/jonknowles">Jon Knowles</a></p>
 
 
     <script src="bundle.js"></script>

@@ -93,10 +93,7 @@ body {
 }
 
 .title {
-  /* margin: 2rem; */
 }
-
-
 
 textarea {
   width: 100%;
@@ -118,7 +115,7 @@ textarea {
   flex: 1;
 }
 
-.controls-area {
+.share-area {
   margin: 1rem auto;
 }
 

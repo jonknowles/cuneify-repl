@@ -1,7 +1,12 @@
 const {
   not,
   and,
+  identity,
 } = require('./utils.js');
+const {
+  tokenize,
+  TOKEN_TYPES,
+} = require('./tokenize.js');
 
 const cuneiformMap = require('../cuneify/cuneiformMap.json');
 
@@ -39,13 +44,24 @@ const toCuneiform = (token = '', includeExtraChars = true) => {
   return cuneiformSymbol;
 };
 
-
-const TOKEN_REGEX = /-| |\./;
+// {f}KURUN.NA szu-a-ti u2-ka-an-nu-szi-ma a-na me#-e i-na#-[ad-du]-u2-szi
+// 𒈾𒋗𒀀𒋾𒌑𒅗𒀭𒉡𒅆𒈠𒀀𒈾𒈨𒂊𒄿[𒀜𒁺]𒌑𒅆
 
 const transliterate = (inputStr = '') => {
-  const tokens = inputStr.trim().split(TOKEN_REGEX);
-
-  const transliterated = tokens.map(toCuneiform).join('');
+  const tokens = tokenize(inputStr);
+  const transliterated = tokens
+    .map(token => {
+      // If we have a valid token, transform it into cuneiform
+      // throw everything else away except the newline chars
+      const { type, value = '' } = token;
+      if (type === TOKEN_TYPES.TOKEN) {
+        return toCuneiform(value);
+      }
+      const newLines = value.match(/\n/g) || [];
+      return newLines.join('');
+    })
+    .filter(identity)
+    .join('');
 
   return transliterated;
 };

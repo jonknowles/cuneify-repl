@@ -2,7 +2,7 @@ const { transliterate } = require('./transliterate.js');
 
 const inputTextarea = document.getElementById('input-textarea');
 const outputTextarea = document.getElementById('output-textarea');
-// const goBtn = document.getElementById('go-btn');
+const goBtn = document.getElementById('go-btn');
 const fontSelect = document.getElementById('font-select');
 const permalink = document.getElementById('permalink');
 
@@ -53,7 +53,8 @@ const createApp = () => {
     fontSelect.appendChild(option);
   });
 
-  // goBtn.addEventListener('click', processInput);
+  goBtn.addEventListener('click', processInput);
+
   inputTextarea.addEventListener('keyup', processInput);
   fontSelect.addEventListener('change', (event) => {
     const { value } = event.target;
