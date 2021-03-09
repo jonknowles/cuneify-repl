@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <section>
+      <h1 class="title">Cuneify REPL</h1>
+      <p>
+        Type <a target="_blank" href="http://oracc.museum.upenn.edu/saao/knpp/cuneiformrevealed/aboutcuneiform/computercuneiform/index.html">ASCII Transliteration Format (ATF) notation</a> in the left editor below and it will be transformed into cuneiform characters.
+      </p>
+      <p>This page is based on the <a target="_blank" href="http://cuneifyplus.arch.cam.ac.uk/">Cuneify project</a> <a target="_blank" href="https://github.com/tpgillam/cuneifyplus">source code</a> by Steve Tinney and Tom Gillam.</p>
+      <p>
+        Sample ATF syntax:
+        {f}KURUN.NA szu-a-ti u2-ka-an-nu-szi-ma a-na me#-e i-na#-[ad-du]-u2-szi
+      </p>
+    </section>
+    <section class="editor-area">
+      <div class="input-area">
+        <textarea id="input-textarea" autocapitalize="false" autocomplete="false" spellcheck="false"></textarea>
+      </div>
+      <div class="output-area">
+        <textarea id="output-textarea" autocapitalize="false" autocomplete="false" spellcheck="false" readonly></textarea>
+        <div>
+          <select id="font-select"></select>
+        </div>
+      </div>
+    </section>
+    <section class="controls-area">
+      <!-- <button id="go-btn" type="button">
+        Go
+      </button> -->
+
+      <p>
+        <span class="label">Shareable permalink:</span>
+        <span id="permalink" class="permalink"></span>
+      </p>
+
+    </section>
+
+
+    <script src="bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+@font-face {
+  font-family: Santakku;
+  src: url(fonts/Santakku.woff) format('woff'),
+       url(fonts/Santakku.eot) format('embedded-opentype'),
+       url(fonts/Santakku.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: CuneiformOB;
+  src: url(fonts/CuneiformOB.woff) format('woff'),
+       url(fonts/CuneiformOB.eot) format('embedded-opentype'),
+       url(fonts/CuneiformOB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: SantakkuM;
+  src: url(fonts/SantakkuM.woff) format('woff'),
+       url(fonts/SantakkuM.eot) format('embedded-opentype'),
+       url(fonts/SantakkuM.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: UllikummiA;
+  src: url(fonts/UllikummiA.woff) format('woff'),
+       url(fonts/UllikummiA.eot) format('embedded-opentype'),
+       url(fonts/UllikummiA.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: UllikummiB;
+  src: url(fonts/UllikummiB.woff) format('woff'),
+       url(fonts/UllikummiB.eot) format('embedded-opentype'),
+       url(fonts/UllikummiB.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: UllikummiC;
+  src: url(fonts/UllikummiC.woff) format('woff'),
+       url(fonts/UllikummiC.eot) format('embedded-opentype'),
+       url(fonts/UllikummiC.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: Assurbanipal;
+  src: url(fonts/Assurbanipal.woff) format('woff'),
+       url(fonts/Assurbanipal.eot) format('embedded-opentype'),
+       url(fonts/Assurbanipal.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: CuneiformNA;
+  src: url(fonts/CuneiformNA.woff) format('woff'),
+       url(fonts/CuneiformNA.eot) format('embedded-opentype'),
+       url(fonts/CuneiformNA.ttf) format('truetype');
+}
+
+.santakku {
+  font-family: Santakku;
+}
+
+.cuneiformob {
+  font-family: CuneiformOB;
+}
+
+.santakkum {
+  font-family: SantakkuM;
+}
+
+.ullikummia {
+  font-family: UllikummiA;
+}
+
+.ullikummib {
+  font-family: UllikummiB;
+}
+
+.ullikummic {
+  font-family: UllikummiC;
+}
+
+.assurbanipal {
+  font-family: Assurbanipal;
+}
+
+.cuneiformna {
+  font-family: CuneiformNA;
+}
+
+/* ------------------------------------------------------ */
+
+body {
+  margin: 2rem;
+}
+
+.title {
+  /* margin: 2rem; */
+}
+
+
+
+textarea {
+  width: 100%;
+  min-height: 35vh;
+  font-size: 1.5rem;
+}
+
+.editor-area {
+  display: flex;
+  width: 90vw;
+  margin: 1rem auto;
+}
+
+.input-area {
+  flex: 1;
+}
+
+.output-area {
+  flex: 1;
+}
+
+.controls-area {
+  margin: 1rem auto;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.permalink {
+  font-style: italic;
+}
